@@ -1,0 +1,84 @@
+The process in which a function calls itself directly or indirectly is called recursion and the corresponding function is called 
+a recursive function.
+
+    ->  A recursive algorithm takes one step toward solution and then recursively call itself to further move. 
+        The algorithm stops once we reach the solution.
+    ->  Since called function may further call itself, this process might continue forever. So it is essential to provide a base 
+        case to terminate this recursion process.
+
+Steps to Implement Recursion
+
+    Step1 - Define a base case: Identify the simplest (or base) case for which the solution is known or trivial. 
+            This is the stopping condition for the recursion, as it prevents the function from infinitely calling itself.
+
+    Step2 - Define a recursive case: Define the problem in terms of smaller subproblems. Break the problem down into 
+            smaller versions of itself, and call the function recursively to solve each subproblem.
+
+    Step3 - Ensure the recursion terminates: Make sure that the recursive function eventually reaches the base case, and 
+            does not enter an infinite loop.
+
+    Step4 - Combine the solutions: Combine the solutions of the subproblems to solve the original problem.
+
+
+Example 1 : Sum of Natural Numbers (n=3)
+
+    Input : n = 3
+    Output : 6
+    Explanation : The sum of first 3 natural numbers is 1+2+3 = 6.
+
+    Input : n = 7
+    Output : 28
+    Explanation : The sum of first 7 natural numbers is 1+2+3+4+5+6+7 = 28
+
+
+Why use recursion?
+Imagine This
+
+You have this family tree:
+
+Grandfather
+├── Father
+│   ├── You
+│   └── Sister
+└── Uncle
+    ├── Cousin1
+    └── Cousin2
+
+Now suppose I ask:
+
+“Print every person’s name.”
+
+Easy to SEE.
+
+But how do you CODE it?
+
+With a Loop?
+
+A loop works nicely when things are linear:
+
+1 2 3 4 5
+
+because you know:
+
+next element
+next index
+fixed structure
+
+But this tree is NOT linear.
+
+Each person can have:
+
+0 children
+2 children
+5 children
+
+You don’t know beforehand.
+
+Recursive Thinking
+
+You say:
+
+“For any person:
+print their name
+ask the SAME function to handle their children”
+

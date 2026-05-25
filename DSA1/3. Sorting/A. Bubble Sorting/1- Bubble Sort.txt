@@ -1,0 +1,28 @@
+Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in 
+the wrong order. This algorithm is not efficient for large data sets as its average and worst-case time complexity are 
+quite high.
+
+
+1.  Select the range of the unsorted array: Use an outer loop (i) that runs backward from n-1 to 0 (where n is the size of the array). 
+    The value i = n-1 means the range is from 0 to n-1, i = n-2 means the range is from 0 to n-2, and so on.
+
+2.  Push the maximum element to the end of the selected range: Use an inner loop (j) that runs from 0 to i-1. Compare 
+    adjacent elements and swap them if arr[j] > arr[j+1]. Repeating this process ensures the maximum element in the current
+    range moves to index i.
+
+3.  Progressively sort the array: After each outer loop iteration, the last part of the array becomes sorted. For example:
+
+   ->   After the first iteration, the element at the last index is sorted.
+   ->   After the second iteration, the last two elements are sorted.
+   ->   This continues until the entire array is sorted.
+
+4.  Complete sorting: After n-1 iterations, the whole array will be sorted. 
+
+
+Important Points:
+
+outer loop → number of passes
+inner loop → comparisons
+
+passes = n - 1 passes
+

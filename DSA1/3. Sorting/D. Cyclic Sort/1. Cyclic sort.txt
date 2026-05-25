@@ -1,0 +1,24 @@
+Cycle Sort is an in-place, unstable, comparison-based sorting algorithm that is optimal in terms of the 
+minimum number of memory writes.
+
+    ->  The idea is to divide the array into cycles, where each cycle consists of elements that belong to each other’s 
+        correct positions, and then rotate these cycles to place all elements correctly.
+    ->  In Cycle Sort, each element is written at most once to its correct position, making it useful in situations where 
+        write operations are costly.
+
+
+
+Example:
+
+    Input: arr[] = [2, 4, 5, 1, 3]
+    Output: [1,2,3,4,5]
+    Explanation:
+
+        2 -> correct index 1
+        4 -> correct index 3
+        5 -> correct index 4 
+        1 -> correct index 0  
+        3 -> correct index 2 
+
+    These form cycles: Cycle 1: 2 -> 4 -> 1 -> 2 , Cycle 2: 5 -> 3 -> 5. After rotating these cycles, 
+    array becomes: [1, 2, 3, 4, 5] 
